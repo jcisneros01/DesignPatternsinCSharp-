@@ -60,12 +60,27 @@ namespace DesignPatternsInCSharp
 
             #region Factory
 
-            var point = Point.NewPolarPoint(1.0, Math.PI / 2);
+/*            var point = Point.NewPolarPoint(1.0, Math.PI / 2);
+            Console.WriteLine(point);*/
+
+            //var foo = await Foo.CreateAsync();
+
+            var point = Point.Factory.NewPolarPoint(1.0, Math.PI / 2);
             Console.WriteLine(point);
-
-            var foo = await Foo.CreateAsync();
-
             #endregion
+        }
+    }
+
+    public interface IHotDrink
+    {
+        void Consume();
+    }
+    
+    public class Tea: IHotDrink
+    {
+        public void Consume()
+        {
+            Console.WriteLine("This tea is nice but I'd prefer it with milk.");
         }
     }
 }
