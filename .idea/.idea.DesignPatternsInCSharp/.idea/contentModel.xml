@@ -13,8 +13,15 @@
         </e>
         <e p="DesignPatternsInCSharp.csproj" t="IncludeRecursive" />
         <e p="Factory" t="Include">
+          <e p="Coffee.cs" t="Include" />
+          <e p="CoffeeFactory.cs" t="Include" />
           <e p="Foo.cs" t="Include" />
+          <e p="HotDrinkMachine.cs" t="Include" />
+          <e p="IHotDrink.cs" t="Include" />
+          <e p="IHotDrinkFactory.cs" t="Include" />
           <e p="Point.cs" t="Include" />
+          <e p="Tea.cs" t="Include" />
+          <e p="TeaFactory.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">

@@ -1,6 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
-using DesignPatternsInCSharp.Factory;
+﻿using System.Threading.Tasks;
 
 namespace DesignPatternsInCSharp
 {
@@ -57,7 +55,6 @@ namespace DesignPatternsInCSharp
 
 
             #endregion
-
             #region Factory
 
 /*            var point = Point.NewPolarPoint(1.0, Math.PI / 2);
@@ -65,22 +62,17 @@ namespace DesignPatternsInCSharp
 
             //var foo = await Foo.CreateAsync();
 
-            var point = Point.Factory.NewPolarPoint(1.0, Math.PI / 2);
-            Console.WriteLine(point);
-            #endregion
-        }
-    }
+/*            var point = Point.Factory.NewPolarPoint(1.0, Math.PI / 2);
+            Console.WriteLine(point);*/
+            
+            /*var machine = new HotDrinkMachine();
+            var drink = machine.MakeDrink(HotDrinkMachine.AvailableDrink.Tea, 300);
+            drink.Consume();*/
+            
+            /*var machine = new HotDrinkMachine();
+            var drink = machine.MakeDrink();*/
 
-    public interface IHotDrink
-    {
-        void Consume();
-    }
-    
-    public class Tea: IHotDrink
-    {
-        public void Consume()
-        {
-            Console.WriteLine("This tea is nice but I'd prefer it with milk.");
+            #endregion
         }
     }
 }
