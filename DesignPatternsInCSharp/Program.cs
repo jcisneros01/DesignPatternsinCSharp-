@@ -1,9 +1,18 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using DesignPatternsInCSharp.Adapter;
 
 namespace DesignPatternsInCSharp
 {
     class Program
     {
+        private static readonly List<VectorObject> vectorObjects = new List<VectorObject>
+        {
+            new VectorRectangle(1, 1, 10, 10),
+            new VectorRectangle(3, 3, 6, 6)
+        };
+        
         static async Task Main(string[] args)
         {
             #region Command
@@ -73,6 +82,26 @@ namespace DesignPatternsInCSharp
             var drink = machine.MakeDrink();*/
 
             #endregion
+
+            #region Adapter
+            foreach (var vo in vectorObjects)
+            {
+                foreach (var line in vo)
+                {
+                    var adapter = new LineToPointAdapter(line);
+                    foreach (var point in adapter)
+                    {
+                        DrawPoint(point);
+                    }
+                }
+            }
+            #endregion
         }
+        
+        public static void DrawPoint(Point p)
+        {
+            Console.Write(".");
+        }
+
     }
 }

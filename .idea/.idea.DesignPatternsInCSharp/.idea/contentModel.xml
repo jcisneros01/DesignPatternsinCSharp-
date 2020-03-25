@@ -3,6 +3,13 @@
   <component name="ContentModelStore">
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="DesignPatternsInCSharp" t="IncludeRecursive">
+        <e p="Adapter" t="Include">
+          <e p="Line.cs" t="Include" />
+          <e p="LineToPointAdapter.cs" t="Include" />
+          <e p="Point.cs" t="Include" />
+          <e p="VectorObject.cs" t="Include" />
+          <e p="VectorRectangle.cs" t="Include" />
+        </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="Command" t="Include">
           <e p="BankAccount.cs" t="Include" />
